@@ -1,1 +1,39 @@
-TLDR: we have a web page too
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Fade-In</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;      
+            margin: 0;
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            opacity: 0; /* Start invisible */
+            animation: fadeIn 2s ease-in-out forwards; 
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; } /* End fully visible */
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="logo.png" alt="Your Logo"> 
+    </div>
+</body>
+</html>
